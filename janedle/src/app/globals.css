@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.adaptive-text-lg {
+  @apply text-4xl lg:text-6xl text-white font-serif;
+}
+
+.adaptive-text-md {
+  @apply text-xl lg:text-3xl text-white font-serif;
+}
+
+.adaptive-text-sm {
+  @apply text-sm lg:text-xl text-white font-serif;
+}
+
+.three-button-container {
+  @apply flex lg:flex-row flex-col items-center justify-center gap-2 ;
+}
+
+.custom-button {
+  @apply rounded-lg w-full lg:text-5xl text-xl px-8 py-4 transition-all hover:scale-105 shadow-xl font-serif;
+}
