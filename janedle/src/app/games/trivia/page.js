@@ -1,6 +1,7 @@
 import DiscordChannel from "@/app/components/discordchannel";
 
 export default function Trivia(){
+    var users = {channel: "Evemas", users: ["Jane", "Dylan", "Aswin", "Conner", "ConnerMeadows"]}
     return(
         <div className="flex flex-col min-h-screen p-4 w-screen justify-center items-center gap-8">
             <div className="flex h-96 max-w-6xl ">
@@ -33,22 +34,22 @@ export default function Trivia(){
                     </div>
                     <div className="h-56 py-2">
                         <div className="flex flex-col items-center px-2 py-1 gap-1">
-                            <DiscordChannel isText={true} name="general-3"/>
-                            <DiscordChannel isText={true} name="bot-spam"/>
-                            <DiscordChannel isText={true} name="dnd-runeterra"/>
-                            <DiscordChannel isText={true} name="zard-shrine"/>
-                            <DiscordChannel isText={true} name="rules"/>
-                            <DiscordChannel isText={true} name="politics"/>
-                            <DiscordChannel isVoice={true} name="Wendy's Wednesday"/>
-                            <DiscordChannel isVoice={true} name="Scholotzsky's Sunday"/>
-                            <DiscordChannel isVoice={true} name="Off Work"/>
-                            <DiscordChannel isVoice={true} name="Evemas"/>
-                            <DiscordChannel isVoice={true} name="Phreaky Friday 😜😈😩"/>
-                            <DiscordChannel isVoice={true} name="In Runeterra"/>
-                            <DiscordChannel isVoice={true} name="♾🌈💘"/>
-                            <DiscordChannel isVoice={true} name="Deciet 2 ranked vc"/>
-                            <DiscordChannel isVoice={true} name="On the clock"/>
-                            <DiscordChannel isVoice={true} name="Hot Tub (AFK)"/>
+                            <DiscordChannel isText={true} name="general-3" users={users}/>
+                            <DiscordChannel isText={true} name="bot-spam" users={users}/>
+                            <DiscordChannel isText={true} name="dnd-runeterra" users={users}/>
+                            <DiscordChannel isText={true} name="zard-shrine" users={users}/>
+                            <DiscordChannel isText={true} name="rules" users={users}/>
+                            <DiscordChannel isText={true} name="politics" users={users}/>
+                            <DiscordChannel isVoice={true} name="Wendy's Wednesday" users={users}/>
+                            <DiscordChannel isVoice={true} name="Scholotzsky's Sunday" users={users}/>
+                            <DiscordChannel isVoice={true} name="Off Work" users={users}/>
+                            <DiscordChannel isVoice={true} name="Evemas" users={users}/>
+                            <DiscordChannel isVoice={true} name="Phreaky Friday 😜😈😩" users={users}/>
+                            <DiscordChannel isVoice={true} name="In Runeterra" users={users}/>
+                            <DiscordChannel isVoice={true} name="♾🌈💘" users={users}/>
+                            <DiscordChannel isVoice={true} name="Deciet 2 ranked vc" users={users}/>
+                            <DiscordChannel isVoice={true} name="On the clock" users={users}/>
+                            <DiscordChannel isVoice={true} name="Hot Tub (AFK)" users={users}/>
                         </div>
                     </div>
                     </div>
@@ -60,7 +61,10 @@ export default function Trivia(){
                         <div className="text-lg mx-2 text-gray-700">|</div>
                         <div className="text-sm text-gray-400">wayawayawayawayayaya</div>
                     </div>
-                    Long ago there were a lot gaming gamers, and they were all very gamer. One day, a gamer gamer gamer gam
+
+                    <div className="flex flex-col h-full overflow-scroll p-4">
+                    Long ago there were a lot gaming gamers, and they were all very gamer. One day, a gamer gamer gamer 
+                    </div>
                 </div>
             </div>
         </div>
