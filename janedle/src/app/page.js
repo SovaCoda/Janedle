@@ -69,7 +69,7 @@ export default function Home() {
 
   //if the user has ansered the question, do nothing
   function handleAnime() {
-    if (answered['anime']) {return;}
+    if (!answered['anime']) {return;}
     router.push('games/anime');
   }
 
@@ -79,7 +79,7 @@ export default function Home() {
   }
 
   function handleDiscord() {
-    if (answered['discord']) {return;}
+    if (!answered['discord']) {return;}
     router.push('games/discord');
   }
 
@@ -91,10 +91,7 @@ export default function Home() {
           <div className='adaptive-text-lg text-white'>{timeLeft}</div>
       </div>
       <div className='flex flex-col justify-center items-center font-serif w-full max-w-xl h-full gap-4'>
-        <div onClick={handleDiscord} className={` ${ answered['discord'] ? "opacity-50" : ""} flex justify-center items-center w-full h-1/6 text-center rounded-lg bg-cyan-600 adaptive-text-md p-4 relative hover:translate-x-8 transition-all cursor-pointer`}>
-          <div className='absolute left-0 top-0 adaptive-text-lg -rotate-12 translate-x-4 -translate-y-0'>
-            Coming Soon!
-          </div>
+        <div onClick={handleDiscord} className={` ${ !answered['discord'] ? "opacity-50" : ""} flex justify-center items-center w-full h-1/6 text-center rounded-lg bg-cyan-600 adaptive-text-md p-4 relative hover:translate-x-8 transition-all cursor-pointer`}>
           <div className='justify-center items-center text-center'>
               Would Jane join Discord?
             </div>
@@ -102,7 +99,7 @@ export default function Home() {
               {'>'}
             </div>
           </div>
-        <div onClick={handleAnime} className={` ${ answered['anime'] ? "opacity-50" : ""} flex justify-center items-center w-full h-1/6 text-center rounded-lg bg-cyan-600 adaptive-text-md p-4 relative hover:translate-x-8 transition-all cursor-pointer`}>
+        <div onClick={handleAnime} className={` ${ !answered['anime'] ? "opacity-50" : ""} flex justify-center items-center w-full h-1/6 text-center rounded-lg bg-cyan-600 adaptive-text-md p-4 relative hover:translate-x-8 transition-all cursor-pointer`}>
           <div className='justify-center items-center text-center'>
               What did Jane rate this anime?
             </div>
@@ -121,7 +118,7 @@ export default function Home() {
             {'>'}
           </div>
         </div>
-      </div>
+      </div> 
     </div>
   );
 }

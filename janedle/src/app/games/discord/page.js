@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuthContext } from '@/context/AuthContext';
+import DiscordEmulator from '../../../../components/discordemulator';
 
 export default function Discord() {
     const [feedback, setFeedback] = useState('');
@@ -19,7 +20,9 @@ export default function Discord() {
     return (
       <main className="flex flex-col min-h-screen p-4 w-screen justify-center items-center gap-8">
         <div className="w-fill border-2 border-white h-fill max-h-96 max-w-96 justify-center items-center text-center text-white rounded-lg">
-          <div className='xl:w-96 xl:h-96 w-48 h-48'></div>
+          <div className='xl:w-96 xl:h-96 w-48 h-48'>
+            <DiscordEmulator />
+          </div>
         </div>
         <div className="flex flex-col items-center gap-4">
           <div className="text-white text-center">

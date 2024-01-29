@@ -21,3 +21,51 @@
 .custom-button {
   @apply rounded-lg w-full lg:text-5xl text-xl px-8 py-4 transition-all hover:scale-105 shadow-xl font-serif;
 }
+
+.bg-discord-channel-bar {
+  background-color: rgb(43,45,49);
+}
+
+.bg-discord-server-bar {
+  background-color: rgb(30,31,34);
+}
+
+.bg-discord-chat {
+  background-color: rgb(49,51,56);
+}
+
+.pseudo-border {
+  position: relative;
+}
+
+.pseudo-border::after {
+  content: "";
+  position: absolute;
+  left: 5%; /* Center the border */
+  bottom: 0;
+  width: 90%;
+  border-bottom: 2px solid #313338; /* Adjust border as needed */
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2c2e33;
+}
+
+::-webkit-scrollbar-thumb {
+  background:#1d1f23;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* For Firefox */
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
